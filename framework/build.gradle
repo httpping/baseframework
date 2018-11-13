@@ -18,7 +18,7 @@ android {
         release {
             minifyEnabled false
             //this can remove no-used images in generated-apk, and it is depends on "minifyEnabled true"
-            zipAlignEnabled true
+//            zipAlignEnabled true
         }
         debug {
             minifyEnabled false

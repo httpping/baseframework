@@ -16,6 +16,13 @@ buildscript {
     }
 }
 
+ext {
+    keyAlias       = "wmsapp"
+    keyPassword     = "123456"
+    storeFile       = "../wmsapp.jks"
+    storePassword = "123456"
+}
+
 allprojects {
     repositories {
         google()
