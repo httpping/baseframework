@@ -64,7 +64,7 @@ public class WebViewActivity extends BaseBrowserActivity  {
 
 //        webView.loadUrl("https://www.baidu.com/");
 
-        webView.loadUrl("file:///android_asset/test2.html");
+        webView.loadUrl("file:///android_asset/test.html");
 
 
 //        String path = getSDcardRootPath();
@@ -103,12 +103,11 @@ public class WebViewActivity extends BaseBrowserActivity  {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_EXTERNAL_STORAGE){
-            JsResponse result = FileOptions.getInstance(this).writeFile("abc1.json","谭平最帅");
-            ToastUtil.showToast(this,result.code+"");
+            JsResponse result = null;
 
 
 
-            result = FileOptions.getInstance(this).writeFile("abc3.json",null);
+            result = FileOptions.getInstance(this).writeFile("abc3.json","测试吧");
             ToastUtil.showToast(this,result.code+"");
 
             result = FileOptions.getInstance(this).readFile("abc1.json");

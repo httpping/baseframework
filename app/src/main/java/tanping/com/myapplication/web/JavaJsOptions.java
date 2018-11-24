@@ -29,6 +29,7 @@ import android.webkit.JavascriptInterface;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
+import com.utils.ui.ToastUtil;
 
 import tanping.com.myapplication.bean.JsRequest;
 import tanping.com.myapplication.bean.JsResponse;
@@ -69,6 +70,13 @@ public class JavaJsOptions {
         }catch (Exception e){
             response.code = 500;
             response.error = "内部错误";
+        }
+
+        try {
+            JsResponse result = FileOptions.getInstance(activity).writeFile("abc1.json", "xxx===谭平最帅");
+            ToastUtil.showToast(activity,result.code+"");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return data + " hello world! ";
